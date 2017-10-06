@@ -1,0 +1,14 @@
+Used dynamic programming to find out fibonacci series:
+Memoizing the previously found values in the dict fib helps to 
+find the nth fibonacci value.
+
+Procedure:
+fib = {}
+for i in range(n+1):
+  if i <= 2:
+    f = 1
+  else:
+    f = fib[k-1] + fib[k-2]
+  fib[i] = f
+return fib[n]
+
