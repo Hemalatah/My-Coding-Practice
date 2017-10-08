@@ -1,0 +1,26 @@
+Input: [-1, 0, -1, 1, 2, -4]
+output: [-1, 0, 1], [-1, -1, 2]
+
+def three_sum_zero(arr):
+  arr.sort()
+  print arr
+  res = []
+  i = 0
+  while i <= (len(arr)-3):
+    if (i == 0 or arr[i] > arr[i-1]):
+      start = i+1
+      end = len(arr)-1
+      while start<end:
+      	print i, start, end
+        if (arr[i]+arr[start]+arr[end]) == 0:
+          res.append([arr[i],arr[start],arr[end]])
+        if (arr[i]+arr[start]+arr[end]) < 0:
+          current_start = start
+          while (arr[start] == arr[current_start] and start<end):
+            start += 1
+        else:
+          current_end = end
+          while (arr[end] == arr[current_end] and start<end):
+            end -= 1
+    i += 1
+  return res
