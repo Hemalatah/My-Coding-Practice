@@ -1,0 +1,11 @@
+Write a program to find number of ones in the binary representation of number
+
+Input: 2 --> 0B10
+Output: 1
+
+def ones(num):
+  s = 0
+  while(num > 0):
+    s += num & 1
+    num >>= 1
+  return s
