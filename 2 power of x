@@ -1,0 +1,14 @@
+def two_power(x):
+  return 1<<x
+
+1 left shifted x is the 2^^x
+
+### To check if the value x is two power of n
+
+def is_power(x):
+  if (x & (x-1)) == 0:
+    return "Yes"
+  else:
+    return "No"
+    
+   
