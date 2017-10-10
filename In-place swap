@@ -1,0 +1,10 @@
+Write a function to swap a number in place without temporary variables
+
+def inplace_swap(x.y):
+  x = x ^ y
+  y = x ^ y
+  x = x ^ y
+  return x, y
+
+Instead of XOR, Addition/Subtraction or Mulpication/Division can be used.
+
