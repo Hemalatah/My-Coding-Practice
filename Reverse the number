@@ -1,0 +1,14 @@
+def reverse(num):
+	carry = 1
+	if num < 0:
+		carry = -1
+		num = carry * num
+	res = 0
+	while (num != 0):
+		res = res*10 + (num % 10)
+		print res
+		num /= 10
+	return carry * res
+
+print reverse(321)
+# output: 123
