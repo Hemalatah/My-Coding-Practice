@@ -1,0 +1,14 @@
+def dupli(arr):
+	num = 1
+	i = 0
+	prev = arr[i]
+	while i < len(arr)-1:
+		if arr[i] != arr[i+1]:
+			num += 1
+			prev = arr[i+1]
+		i += 1
+	return num
+
+print dupli([1,1,1,2,2,3,3,3,4])
+
+# output: [1,2,3,4]
