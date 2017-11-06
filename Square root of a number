@@ -1,0 +1,8 @@
+def sqroot(x):
+	r = x
+	while r*r > x:
+		r = (r + x/r) / 2
+	return r
+
+print sqroot(20)
+# output: 4
